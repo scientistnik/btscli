@@ -50,7 +50,7 @@ It is nodejs REPL with several variables:
 #### For example
 
 ```js
-$ btsdex
+$ btscli
 > assets["bts"].then(console.log)
 ```
 
@@ -66,14 +66,14 @@ $ btscli --account <'name' or 'id' or 'last number in id'>
   "referrer": "1.2.21",
   ...
 }
-$ btsdex --asset <'symbol' or 'id' or 'last number in id'>
+$ btscli --asset <'symbol' or 'id' or 'last number in id'>
 {
   "id": "1.3.0",
   "symbol": "BTS",
   "precision": 5,
   ...
 }
-$ btsdex --block [<number>]
+$ btscli --block [<number>]
 block_num: 4636380
 {
   "previous": "0046bedba1317d146dd6afbccff94412d76bf094",
@@ -81,7 +81,7 @@ block_num: 4636380
   "witness": "1.6.41",
   ...
 }
-$ btsdex --object 1.2.3
+$ btscli --object 1.2.3
 {
   "id": "1.2.3",
   "membership_expiration_date": "1969-12-31T23:59:59",
@@ -89,7 +89,7 @@ $ btsdex --object 1.2.3
   "referrer": "1.2.3",
   ...
 }
-$ btsdex --history <account> [<limit>] [<start>] [<stop>]
+$ btscli --history <account> [<limit>] [<start>] [<stop>]
 [
   {
     "id": "1.11.98179",
@@ -97,7 +97,7 @@ $ btsdex --history <account> [<limit>] [<start>] [<stop>]
       0,
   ...
 }]
-$ btsdex --transfer <from> <to> <amount> <asset> [--key]
+$ btscli --transfer <from> <to> <amount> <asset> [--key]
 Transfered <amount> <asset> from '<from>' to '<to>' with memo '<memo>'
 ```
 
