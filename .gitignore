@@ -2,3 +2,4 @@ node_modules
 bin
 build
 yarn.lock
+yarn-error.log

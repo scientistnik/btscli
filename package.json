@@ -1,17 +1,20 @@
 {
   "name": "btscli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
   "repository": "git@github.com:scientistnik/btscli.git",
   "author": "Nikolay Nozdrin-Plotnitsky <scientistnik89@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --exec yarn build --watch src",
-    "build": "babel src -d build",
-    "pkg": "pkg build/index.js --out-path bin"
+    "build": "rm -rf build && babel src -d build",
+    "pkg": "pkg . --out-path bin"
   },
+  "bin": "build/index.js",
   "dependencies": {
-    "btsdex": "^0.7.2"
+    "btsdex": "^0.7.2",
+    "dotenv": "^8.1.0",
+    "is_js": "^0.9.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
